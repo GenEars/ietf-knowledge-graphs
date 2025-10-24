@@ -70,7 +70,7 @@ LIMIT 25
 """
 for row in g.query(q):
     print(row)
-🧭 How to navigate
+- How to navigate
 	- Schema first? Open simap-rdfs-schema.ttl to view classes and properties (labels + comments).
 	- Cross-ontology view? Open relations-IETF-Simap-Noria.ttl and scan by predicate strength:
 	  - align:equals --> strongest
@@ -78,20 +78,20 @@ for row in g.query(q):
 	  - align:lessGeneral --> IETF term is narrower than the NORIA term
 	- Follow references: search for *-ref (network-ref, node-ref, link-ref, tp-ref) to see how leafrefs connect to noria concepts.
 
-🧩 What you can do
+- What you can do
 	- Validate the IETF model with SHACL/SPARQL shape checks.
 	- Integrate IETF instances into a NORIA-based knowledge graph using the alignment.
 	- Query across models via align:* predicates to bridge vocabularies.
 	- Extend with extra modules (e.g., L2/L3 types) and add new align: statements.
-🛠 Tips
+- Tips
 	- Keep IETF schema files read-only. Put custom mappings in separate TTLs.
 	- Prefer mapping strength in this order: equals --> similar --> lessGeneral.
 	- Document any design decisions at the top of your alignment file.
 	- Use clear commit messages when updating alignments.
-📚 References
+- References
 Simple Alignment Ontology: http://knowledgeweb.semanticweb.org/heterogeneity/alignment#
 NORIA Ontology: https://w3id.org/noria/ontology/
-📬 Contributing
+- Contributing
 PRs are welcome for:
 - New or refined mappings
 - Examples & tests
