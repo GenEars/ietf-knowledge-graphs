@@ -1,0 +1,95 @@
+@prefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#> .
+@prefix noria:  <https://w3id.org/noria/ontology/> .
+
+# =========================
+# Class-level correspondences
+# =========================
+
+<http://www.huawei.com/ontology/ietf-network-topology/networks/network/link>
+  align:equals noria:NetworkLink .
+
+<http://www.huawei.com/ontology/ietf-network-topology/networks/network/node/termination-point>
+  align:equals noria:NetworkInterface .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/node>
+  align:lessGeneral noria:Resource .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network>
+  align:similar noria:Service .
+
+<http://www.huawei.com/ontology/ietf-network/networks>
+  align:similar noria:ManagedElement .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/network-types>
+  align:similar noria:Service .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/supporting-network>
+  align:similar noria:Service .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/supporting-link>
+  align:lessGeneral noria:NetworkLink .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node>
+  align:lessGeneral noria:Resource .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point/supporting-termination-point>
+  align:lessGeneral noria:NetworkInterface .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/destination>
+  align:similar noria:NetworkLink .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/source>
+  align:similar noria:NetworkLink .
+
+# =========================
+# Object / data property correspondences
+# =========================
+
+# Endpoint node refs (directional)
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-node>
+  align:equals noria:networkLinkTerminationResourceDestination .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-node>
+  align:equals noria:networkLinkTerminationResourceOrigin .
+
+# Endpoint TP refs (interface <-> link attachment)
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-tp>
+  align:similar noria:networkInterfaceConnects .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-tp>
+  align:similar noria:networkInterfaceConnects .
+
+# Link identifier
+<http://www.huawei.com/ontology/ietf-network/networks/network/link/link-id>
+  align:equals noria:networkLinkId .
+
+# Network <-> type
+<http://www.huawei.com/ontology/ietf-network/networks/network/hasNetworkTypes>
+  align:similar noria:serviceType .
+
+# Network, node, TP identifiers (closest noria IDs)
+<http://www.huawei.com/ontology/ietf-network/networks/network/network-id>
+  align:similar noria:functionalElementDistinguishedName .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/node/node-id>
+  align:similar noria:structuralElementDistinguishedName .
+
+<http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point/tp-id>
+  align:similar noria:structuralElementDistinguishedName .
+
+# -------------------------
+# All ref properties
+# In NORIA There are no relations between these classes
+# -------------------------
+
+# supporting-link --> link / network
+
+
+# supporting-node --> node / network
+
+
+# supporting-termination-point --> tp / node / network
+
+
+# supporting-network --> network
+
