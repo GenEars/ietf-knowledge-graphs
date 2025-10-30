@@ -14,7 +14,6 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 	#    b) pwe3-static-topology.ttl
 	#    c) pwe3-dynamic-topology.ttl
 	#    d) Relations-IETF-Noria.ttl (optional alignment)
-	
 	# 4) SPARQL endpoint (use in SPARQLWorks):
 	#    http://localhost:8080/rdf4j-server/repositories/...
 
