@@ -1,0 +1,462 @@
+@prefix ns1: <http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/> .
+@prefix ns10: <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/> .
+@prefix ns11: <http://www.huawei.com/ontology/ietf-network/networks/network/> .
+@prefix ns2: <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point/supporting-termination-point/> .
+@prefix ns3: <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point/> .
+@prefix ns4: <http://www.huawei.com/ontology/ietf-network/networks/network/link/> .
+@prefix ns5: <http://www.huawei.com/ontology/ietf-network/networks/network/supporting-network/> .
+@prefix ns6: <http://www.huawei.com/ontology/ietf-network/networks/network/node/> .
+@prefix ns7: <http://www.huawei.com/ontology/ietf-network/networks/> .
+@prefix ns8: <http://www.huawei.com/ontology/ietf-network/networks/network/link/source/> .
+@prefix ns9: <http://www.huawei.com/ontology/ietf-network/networks/network/link/supporting-link/> .
+@prefix nw: <http://www.huawei.com/ontology/ietf-network/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1> a ns11:link ;
+    rdfs:label "PWTrail_DIRECTION1" ;
+    ns4:hasDest <http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/source> ;
+    ns4:link-id "fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/supporting-link/static-cr-layer__TUNNELTRAIL=41:SEG1:NEWID> a ns4:supporting-link ;
+    ns9:link-ref <http://www.huawei.com/data/network/static-cr-layer/link/TUNNELTRAIL=41:SEG1:NEWID> ;
+    ns9:network-ref <http://www.huawei.com/data/network/static-cr-layer> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/supporting-link/static-cr-layer__TUNNELTRAIL=41:SEG2:NEWID> a ns4:supporting-link ;
+    ns9:link-ref <http://www.huawei.com/data/network/static-cr-layer/link/TUNNELTRAIL=41:SEG2:NEWID> ;
+    ns9:network-ref <http://www.huawei.com/data/network/static-cr-layer> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1> a ns11:link ;
+    rdfs:label "PWTrail_REVERSE_DIRECTION1" ;
+    ns4:hasDest <http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/source> ;
+    ns4:link-id "fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/supporting-link/static-cr-layer__TUNNELTRAIL=41:SEG1:NEWID> a ns4:supporting-link ;
+    ns9:link-ref <http://www.huawei.com/data/network/static-cr-layer/link/TUNNELTRAIL=41:SEG1:NEWID> ;
+    ns9:network-ref <http://www.huawei.com/data/network/static-cr-layer> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/supporting-link/static-cr-layer__TUNNELTRAIL=41:SEG2:NEWID> a ns4:supporting-link ;
+    ns9:link-ref <http://www.huawei.com/data/network/static-cr-layer/link/TUNNELTRAIL=41:SEG2:NEWID> ;
+    ns9:network-ref <http://www.huawei.com/data/network/static-cr-layer> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/supporting-node/tunnel-paths-layer__DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns10:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/supporting-node/tunnel-paths-layer__SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns10:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/termination-point/1e7a5ccc-9ebf-430d-b738-cbb1b672d15f/supporting-termination-point/static-cr-layer__ff089f0a-a7b7-494b-92e4-022af7f20322__43abf9e4-ee41-4f74-8a62-01430d3c6d9f> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/static-cr-layer> ;
+    ns2:node-ref <http://www.huawei.com/data/network/static-cr-layer/node/ff089f0a-a7b7-494b-92e4-022af7f20322> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/static-cr-layer/node/ff089f0a-a7b7-494b-92e4-022af7f20322/termination-point/43abf9e4-ee41-4f74-8a62-01430d3c6d9f> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/supporting-node/tunnel-paths-layer__DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns10:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/supporting-node/tunnel-paths-layer__SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns10:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30/supporting-termination-point/tunnel-paths-layer__DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d__1.1.1.208:DEST_TP_NEWID> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns2:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/1.1.1.208:DEST_TP_NEWID> .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30/supporting-termination-point/tunnel-paths-layer__SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d__12f330f7-997f-4588-8a4f-4a0e3296977d> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> ;
+    ns2:node-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/12f330f7-997f-4588-8a4f-4a0e3296977d> .
+
+<http://www.huawei.com/data/network/core-path-network/supporting-network/layer3-network> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/layer3-network> .
+
+<http://www.huawei.com/data/network/core-path-network/supporting-network/static-cr-layer> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/static-cr-layer> .
+
+<http://www.huawei.com/data/network/layer3-network/link/27d2f2a9-016b-4842-b59a-5916404f3c1d> a ns11:link ;
+    rdfs:label "LL2" ;
+    ns4:hasDest <http://www.huawei.com/data/network/layer3-network/link/27d2f2a9-016b-4842-b59a-5916404f3c1d/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/layer3-network/link/27d2f2a9-016b-4842-b59a-5916404f3c1d/source> ;
+    ns4:link-id "27d2f2a9-016b-4842-b59a-5916404f3c1d"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/link/7807ffc0-c949-4365-9acc-23c4831937cb> a ns11:link ;
+    rdfs:label "LL1" ;
+    ns4:hasDest <http://www.huawei.com/data/network/layer3-network/link/7807ffc0-c949-4365-9acc-23c4831937cb/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/layer3-network/link/7807ffc0-c949-4365-9acc-23c4831937cb/source> ;
+    ns4:link-id "7807ffc0-c949-4365-9acc-23c4831937cb"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/l3:eth-tp-2> a ns6:termination-point ;
+    rdfs:label "Ethernet1/2" ;
+    ns3:tp-id "l3:eth-tp-2"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0> a ns11:link ;
+    rdfs:label "seg0" ;
+    ns4:hasDest <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0/source> ;
+    ns4:link-id "SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1> a ns11:link ;
+    rdfs:label "seg1" ;
+    ns4:hasDest <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1/source> ;
+    ns4:link-id "SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3> a ns11:link ;
+    rdfs:label "seg2" ;
+    ns4:hasDest <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3/source> ;
+    ns4:link-id "SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207/supporting-node/layer3-network__NE=167772695> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns10:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207/termination-point/ADJ_SID:11.11.11.11/supporting-termination-point/layer3-network__NE=167772695__L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208/supporting-node/layer3-network__NE=167772200> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns10:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208/termination-point/ADJ_SID:8.9.0.1/supporting-termination-point/layer3-network__NE=167772200__L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200/termination-point/L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/supporting-node/layer3-network__NE=167772538> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns10:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772538> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:11.11.11.13/supporting-termination-point/layer3-network__NE=167772538__L3:74a8e346-648b-488d-9b53-16f445a4213a> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772538> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:74a8e346-648b-488d-9b53-16f445a4213a> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:8.9.0.2/supporting-termination-point/layer3-network__NE=167772538__L3:0e0a6aa6-235e-4e37-ba33-19bfb0dbf2b2> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772538> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:0e0a6aa6-235e-4e37-ba33-19bfb0dbf2b2> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/supporting-network/layer3-network> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/layer3-network> .
+
+<http://www.huawei.com/data/network/service-network/link/88d5f38a-9277-11ef-8000-286ed4897b20> a ns11:link ;
+    rdfs:label "PWE3Trail-dynamic" ;
+    ns4:hasDest <http://www.huawei.com/data/network/service-network/link/88d5f38a-9277-11ef-8000-286ed4897b20/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/service-network/link/88d5f38a-9277-11ef-8000-286ed4897b20/source> ;
+    ns4:link-id "88d5f38a-9277-11ef-8000-286ed4897b20"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20/supporting-node/core-path-network__88d74406-9277-11ef-8000-286ed4897b20A> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/core-path-network> ;
+    ns10:node-ref <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A> .
+
+<http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20/termination-point/88d8aada-9277-11ef-8000-286ed4897b20/supporting-termination-point/core-path-network__88d74406-9277-11ef-8000-286ed4897b20A__1e7a5ccc-9ebf-430d-b738-cbb1b672d15f> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/core-path-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/termination-point/1e7a5ccc-9ebf-430d-b738-cbb1b672d15f> .
+
+<http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20/supporting-node/core-path-network__88d7a0e0-9277-11ef-8000-286ed4897b20A> a ns6:supporting-node ;
+    ns10:network-ref <http://www.huawei.com/data/network/core-path-network> ;
+    ns10:node-ref <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A> .
+
+<http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20/termination-point/88d909c6-9277-11ef-8000-286ed4897b20/supporting-termination-point/core-path-network__88d7a0e0-9277-11ef-8000-286ed4897b20A__bf3991da-b0de-4ca7-9099-db78d6099d30> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/core-path-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30> .
+
+<http://www.huawei.com/data/network/service-network/supporting-network/core-path-network> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/core-path-network> .
+
+<http://www.huawei.com/data/network/service-network/supporting-network/layer3-network> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/layer3-network> .
+
+<http://www.huawei.com/data/network/service-network/supporting-network/segments-paths-layer> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/segments-paths-layer> .
+
+<http://www.huawei.com/data/network/service-network/supporting-network/tunnel-paths-layer> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/tunnel-paths-layer> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/12f330f7-997f-4588-8a4f-4a0e3296977d> a ns11:link ;
+    rdfs:label "TUNNEL_INTERFACE:12f330f7-997f-4588-8a4f-4a0e3296977d" ;
+    ns4:hasDest <http://www.huawei.com/data/network/tunnel-paths-layer/link/12f330f7-997f-4588-8a4f-4a0e3296977d/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/tunnel-paths-layer/link/12f330f7-997f-4588-8a4f-4a0e3296977d/source> ;
+    ns4:link-id "12f330f7-997f-4588-8a4f-4a0e3296977d"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/be34d7d9-e564-40f5-91e0-42564f5d94a5> a ns11:link ;
+    rdfs:label "TUNNEL_INTERFACE:bdb8c976-eb3a-4749-bc2c-3217d99bc37a" ;
+    ns4:hasDest <http://www.huawei.com/data/network/tunnel-paths-layer/link/be34d7d9-e564-40f5-91e0-42564f5d94a5/destination> ;
+    ns4:hasSource <http://www.huawei.com/data/network/tunnel-paths-layer/link/be34d7d9-e564-40f5-91e0-42564f5d94a5/source> ;
+    ns4:link-id "be34d7d9-e564-40f5-91e0-42564f5d94a5"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/1.1.1.208:DEST_TP_NEWID/supporting-termination-point/layer3-network__NE=167772200__L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200/termination-point/L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/1.1.1.207:DEST_TP_NEWID/supporting-termination-point/layer3-network__NE=167772695__L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/12f330f7-997f-4588-8a4f-4a0e3296977d/supporting-termination-point/layer3-network__NE=167772200__L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772200/termination-point/L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/be34d7d9-e564-40f5-91e0-42564f5d94a5/supporting-termination-point/layer3-network__NE=167772695__L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> a ns3:supporting-termination-point ;
+    ns2:network-ref <http://www.huawei.com/data/network/layer3-network> ;
+    ns2:node-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695> ;
+    ns2:tp-ref <http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/supporting-network/layer3-network> a ns11:supporting-network ;
+    ns5:network-ref <http://www.huawei.com/data/network/layer3-network> .
+
+<http://www.huawei.com/data/networks> a nw:networks ;
+    ns7:hasNetwork <http://www.huawei.com/data/network/core-path-network>,
+        <http://www.huawei.com/data/network/layer3-network>,
+        <http://www.huawei.com/data/network/segments-paths-layer>,
+        <http://www.huawei.com/data/network/service-network>,
+        <http://www.huawei.com/data/network/tunnel-paths-layer> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A> ;
+    ns8:source-tp <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/termination-point/1e7a5ccc-9ebf-430d-b738-cbb1b672d15f> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/termination-point/1e7a5ccc-9ebf-430d-b738-cbb1b672d15f> .
+
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID2_REVERSE_DIRECTION1/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A> ;
+    ns8:source-tp <http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30> .
+
+<http://www.huawei.com/data/network/core-path-network/network-types> a ns11:network-types .
+
+<http://www.huawei.com/data/network/layer3-network/link/27d2f2a9-016b-4842-b59a-5916404f3c1d/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/layer3-network/node/NE=167772695> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> .
+
+<http://www.huawei.com/data/network/layer3-network/link/27d2f2a9-016b-4842-b59a-5916404f3c1d/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/layer3-network/node/NE=167772538> ;
+    ns8:source-tp <http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:74a8e346-648b-488d-9b53-16f445a4213a> .
+
+<http://www.huawei.com/data/network/layer3-network/link/7807ffc0-c949-4365-9acc-23c4831937cb/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/layer3-network/node/NE=167772200> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/layer3-network/node/NE=167772200/termination-point/L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> .
+
+<http://www.huawei.com/data/network/layer3-network/link/7807ffc0-c949-4365-9acc-23c4831937cb/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/layer3-network/node/NE=167772538> ;
+    ns8:source-tp <http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:0e0a6aa6-235e-4e37-ba33-19bfb0dbf2b2> .
+
+<http://www.huawei.com/data/network/layer3-network/network-types> a ns11:network-types .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:11.11.11.13> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_0/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207> ;
+    ns8:source-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207/termination-point/ADJ_SID:11.11.11.11> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:8.9.0.2> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_1/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209> ;
+    ns8:source-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:11.11.11.13> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208/termination-point/ADJ_SID:8.9.0.1> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/link/SRC_NODE_SRC_TP__DEST_NODE_DEST_TP_HASH_NEWID_3/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209> ;
+    ns8:source-tp <http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:8.9.0.2> .
+
+<http://www.huawei.com/data/network/segments-paths-layer/network-types> a ns11:network-types .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207> a ns11:node ;
+    rdfs:label "NODE_SID:1.1.1.207" ;
+    ns6:node-id "NODE_SID:1.1.1.207"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.207/termination-point/ADJ_SID:11.11.11.11> a ns6:termination-point ;
+    rdfs:label "ADJ_SID:11.11.11.11" ;
+    ns3:tp-id "ADJ_SID:11.11.11.11"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208> a ns11:node ;
+    rdfs:label "NODE_SID:1.1.1.208" ;
+    ns6:node-id "NODE_SID:1.1.1.208"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.208/termination-point/ADJ_SID:8.9.0.1> a ns6:termination-point ;
+    rdfs:label "ADJ_SID:8.9.0.1" ;
+    ns3:tp-id "ADJ_SID:8.9.0.1"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network> a ns7:network ;
+    rdfs:label "PWE3 Service Layer" ;
+    ns11:hasNetworkTypes <http://www.huawei.com/data/network/service-network/network-types> ;
+    ns11:network-id "service-network"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network/link/88d5f38a-9277-11ef-8000-286ed4897b20/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20/termination-point/88d909c6-9277-11ef-8000-286ed4897b20> .
+
+<http://www.huawei.com/data/network/service-network/link/88d5f38a-9277-11ef-8000-286ed4897b20/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20> ;
+    ns8:source-tp <http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20/termination-point/88d8aada-9277-11ef-8000-286ed4897b20> .
+
+<http://www.huawei.com/data/network/service-network/network-types> a ns11:network-types .
+
+<http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20> a ns11:node ;
+    rdfs:label "PWE3XC:NE=167772695" ;
+    ns6:node-id "88d74406-9277-11ef-8000-286ed4897b20"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network/node/88d74406-9277-11ef-8000-286ed4897b20/termination-point/88d8aada-9277-11ef-8000-286ed4897b20> a ns6:termination-point ;
+    rdfs:label "SAP:v510:PWE3TRAIL74:SIDEA" ;
+    ns3:tp-id "88d8aada-9277-11ef-8000-286ed4897b20"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20> a ns11:node ;
+    rdfs:label "PWE3XC:NE=167772200" ;
+    ns6:node-id "88d7a0e0-9277-11ef-8000-286ed4897b20"^^xsd:string .
+
+<http://www.huawei.com/data/network/service-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20/termination-point/88d909c6-9277-11ef-8000-286ed4897b20> a ns6:termination-point ;
+    rdfs:label "SAP:v510:PWE3TRAIL74:SIDEB" ;
+    ns3:tp-id "88d909c6-9277-11ef-8000-286ed4897b20"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/12f330f7-997f-4588-8a4f-4a0e3296977d/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/1.1.1.207:DEST_TP_NEWID> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/12f330f7-997f-4588-8a4f-4a0e3296977d/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d> ;
+    ns8:source-tp <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/12f330f7-997f-4588-8a4f-4a0e3296977d> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/be34d7d9-e564-40f5-91e0-42564f5d94a5/destination> a ns4:destination ;
+    ns1:dest-node <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d> ;
+    ns1:dest-tp <http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/1.1.1.208:DEST_TP_NEWID> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/link/be34d7d9-e564-40f5-91e0-42564f5d94a5/source> a ns4:source ;
+    ns8:source-node <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> ;
+    ns8:source-tp <http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/be34d7d9-e564-40f5-91e0-42564f5d94a5> .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/network-types> a ns11:network-types .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/1.1.1.207:DEST_TP_NEWID> a ns6:termination-point ;
+    rdfs:label "1.1.1.207:DEST_TP_NEWID" ;
+    ns3:tp-id "1.1.1.207:DEST_TP_NEWID"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b/termination-point/be34d7d9-e564-40f5-91e0-42564f5d94a5> a ns6:termination-point ;
+    rdfs:label "LSR:SOURCE:TUN38" ;
+    ns3:tp-id "be34d7d9-e564-40f5-91e0-42564f5d94a5"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:0e0a6aa6-235e-4e37-ba33-19bfb0dbf2b2> a ns6:termination-point ;
+    rdfs:label "FNLTP:GigabitEthernet0/2/2" ;
+    ns3:tp-id "L3:0e0a6aa6-235e-4e37-ba33-19bfb0dbf2b2"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772538/termination-point/L3:74a8e346-648b-488d-9b53-16f445a4213a> a ns6:termination-point ;
+    rdfs:label "FNLTP:GigabitEthernet0/2/3" ;
+    ns3:tp-id "L3:74a8e346-648b-488d-9b53-16f445a4213a"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer> a ns7:network ;
+    rdfs:label "SEGMENTS-PATHS Layer" ;
+    ns11:hasNetworkTypes <http://www.huawei.com/data/network/segments-paths-layer/network-types> ;
+    ns11:network-id "segments-paths-layer"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:11.11.11.13> a ns6:termination-point ;
+    rdfs:label "ADJ_SID:11.11.11.13" ;
+    ns3:tp-id "ADJ_SID:11.11.11.13"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209/termination-point/ADJ_SID:8.9.0.2> a ns6:termination-point ;
+    rdfs:label "ADJ_SID:8.9.0.2" ;
+    ns3:tp-id "ADJ_SID:8.9.0.2"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/1.1.1.208:DEST_TP_NEWID> a ns6:termination-point ;
+    rdfs:label "1.1.1.208:DEST_TP_NEWID" ;
+    ns3:tp-id "1.1.1.208:DEST_TP_NEWID"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> a ns11:node ;
+    rdfs:label "DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b" ;
+    ns6:node-id "DEST_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d/termination-point/12f330f7-997f-4588-8a4f-4a0e3296977d> a ns6:termination-point ;
+    rdfs:label "LSR:SOURCE:TUN44" ;
+    ns3:tp-id "12f330f7-997f-4588-8a4f-4a0e3296977d"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b> a ns11:node ;
+    rdfs:label "SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b" ;
+    ns6:node-id "SOURCE_LSR:b517a9b7-a7a1-4de6-a89d-c06421cef33b"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A/termination-point/1e7a5ccc-9ebf-430d-b738-cbb1b672d15f> a ns6:termination-point ;
+    rdfs:label "PW=30|5:Peer=1.1.1.208" ;
+    ns3:tp-id "1e7a5ccc-9ebf-430d-b738-cbb1b672d15f"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A/termination-point/bf3991da-b0de-4ca7-9099-db78d6099d30> a ns6:termination-point ;
+    rdfs:label "PW=30|5:Peer=1.1.1.207" ;
+    ns3:tp-id "bf3991da-b0de-4ca7-9099-db78d6099d30"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d> a ns11:node ;
+    rdfs:label "DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d" ;
+    ns6:node-id "DEST_LSR:738a2335-7a16-4471-928a-0df648a0386d"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer/node/SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d> a ns11:node ;
+    rdfs:label "SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d" ;
+    ns6:node-id "SOURCE_LSR:738a2335-7a16-4471-928a-0df648a0386d"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d74406-9277-11ef-8000-286ed4897b20A> a ns11:node ;
+    rdfs:label "PWE3XC:NE=167772695" ;
+    ns6:node-id "88d74406-9277-11ef-8000-286ed4897b20A"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network/node/88d7a0e0-9277-11ef-8000-286ed4897b20A> a ns11:node ;
+    rdfs:label "PWE3XC:NE=167772200" ;
+    ns6:node-id "88d7a0e0-9277-11ef-8000-286ed4897b20A"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772200/termination-point/L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3> a ns6:termination-point ;
+    rdfs:label "FNLTP:GigabitEthernet0/2/1" ;
+    ns3:tp-id "L3:06f7c0e4-08fb-48ef-9b8e-af980576bdd3"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772695/termination-point/L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f> a ns6:termination-point ;
+    rdfs:label "FNLTP:GigabitEthernet0/2/3" ;
+    ns3:tp-id "L3:43abf9e4-ee41-4f74-8a62-01430d3c6d9f"^^xsd:string .
+
+<http://www.huawei.com/data/network/segments-paths-layer/node/NODE_SID:1.1.1.209> a ns11:node ;
+    rdfs:label "NODE_SID:1.1.1.209" ;
+    ns6:node-id "NODE_SID:1.1.1.209"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772200> a ns11:node ;
+    rdfs:label "FN:NE=167772200" ;
+    ns6:node-id "NE=167772200"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772538> a ns11:node ;
+    rdfs:label "FN:NE=167772538" ;
+    ns6:node-id "NE=167772538"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network/node/NE=167772695> a ns11:node ;
+    rdfs:label "FN:NE=167772695" ;
+    ns6:node-id "NE=167772695"^^xsd:string .
+
+<http://www.huawei.com/data/network/core-path-network> a ns7:network ;
+    rdfs:label "Core Path Layer" ;
+    ns11:hasNetworkTypes <http://www.huawei.com/data/network/core-path-network/network-types> ;
+    ns11:network-id "core-path-network"^^xsd:string .
+
+<http://www.huawei.com/data/network/tunnel-paths-layer> a ns7:network ;
+    rdfs:label "TUNNEL-PATHS Layer" ;
+    ns11:hasNetworkTypes <http://www.huawei.com/data/network/tunnel-paths-layer/network-types> ;
+    ns11:network-id "tunnel-paths-layer"^^xsd:string .
+
+<http://www.huawei.com/data/network/layer3-network> a ns7:network ;
+    rdfs:label "Layer3 Connectivity Layer" ;
+    ns11:hasNetworkTypes <http://www.huawei.com/data/network/layer3-network/network-types> ;
+    ns11:network-id "layer3-network"^^xsd:string .
+
