@@ -1,0 +1,123 @@
+🚀 One-click setup (bash script)
+
+  This repo ships with a helper script that:
+  
+  enables CORS on Tomcat (idempotent),
+  
+  creates an RDF4J repo,
+  
+  uploads the RDFS schema and dynamic instance TTLs,
+  
+  prints the SPARQL endpoint and opens Workbench.
+  
+  Files expected at repo root:
+  
+  hackathon-bootstrap.sh
+  
+  simap-rdfs-schema.ttl
+  
+  pwe3-dynamic-topology.ttl
+  
+  Prerequisites
+  
+  Java 11+
+  
+  Apache Tomcat with RDF4J Server + Workbench deployed
+  (e.g., rdf4j-server.war, rdf4j-workbench.war in TOMCAT_HOME/webapps)
+  
+  curl (included with Git Bash / macOS / most Linux)
+
+🪟 Windows (Git Bash) – safe & quick
+  1) Open Git Bash in the repo root
+  chmod +x hackathon-bootstrap.sh
+  
+  2) Run a safe test (does NOT touch your existing repos)
+  ./hackathon-bootstrap.sh --test
+    Creates repo: ietf-core-test
+    Skips Tomcat restart (Windows-safe)
+  
+  
+  If you need to restart Tomcat on Windows, do it manually in CMD:
+  
+    cd /d D:\Apps\apache-tomcat-9.0.106\bin
+    shutdown.bat
+    startup.bat
+
+  Then re-run the script (optional):
+
+    ./hackathon-bootstrap.sh --test
+
+🍎🐧 macOS / Linux
+  chmod +x hackathon-bootstrap.sh
+    If Tomcat lives here:
+  TOMCAT_HOME=/opt/tomcat ./hackathon-bootstrap.sh
+    or create a safe test repo:
+  TOMCAT_HOME=/opt/tomcat ./hackathon-bootstrap.sh --test
+  
+What the script does
+
+  Adds a CorsFilter to TOMCAT_HOME/conf/web.xml (if missing).
+
+  (By default on Windows) skips Tomcat restart to avoid path issues.
+
+  Bypasses proxies for localhost.
+
+  Deletes any existing repo with the same ID, then creates a fresh NativeStore.
+
+  Uploads:
+
+    simap-rdfs-schema.ttl --> context <http://www.huawei.com/graph/schema>
+
+    pwe3-dynamic-topology.ttl --> context <http://www.huawei.com/graph/instance/pwe3-dynamic-topology>
+
+| Setting          | Default                                      | How to override                                                                   |
+| ---------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
+| Repository ID    | `ietf-core` (`--test` uses `ietf-core-test`) | `REPO_ID=my-repo ./hackathon-bootstrap.sh`                                        |
+| Tomcat home      | `/opt/tomcat`                                | `TOMCAT_HOME="/d/Apps/apache-tomcat-9.0.106" ./hackathon-bootstrap.sh`            |
+| RDF4J server URL | `http://localhost:8080/rdf4j-server`         | `RDF4J_BASE="http://host:port/rdf4j-server" ./hackathon-bootstrap.sh`             |
+| Workbench URL    | `http://localhost:8080/rdf4j-workbench`      | `WORKBENCH_URL="http://host:port/rdf4j-workbench" ./hackathon-bootstrap.sh`       |
+| Restart Tomcat   | **skip** (safe)                              | `./hackathon-bootstrap.sh --restart` (macOS/Linux) or restart manually on Windows |
+
+Verify it worked
+
+  After the script finishes it prints:
+  
+  Workbench
+  http://localhost:8080/rdf4j-workbench/repositories/<REPO_ID>/summary
+  
+  SPARQL endpoint (use this in SPARQLWorks)
+  http://localhost:8080/rdf4j-server/repositories/<REPO_ID>
+
+Quick count (optional):
+
+  SELECT (COUNT(*) AS ?n) WHERE { ?s ?p ?o }
+
+Use with SPARQLWorks (visuals)
+
+  Paste the endpoint into SPARQLWorks, then run any of the CONSTRUCT queries from the README (Links --> Nodes/TPs, supporting-link, supporting-node/TP, etc.).
+
+Troubleshooting 🛠️
+
+  POST not supported / odd 4xx/5xx via curl
+  Your curl may be using a proxy. The script sets no_proxy=localhost, but if running commands manually add --noproxy localhost.
+  
+  Tomcat restart fails in Git Bash
+  This is a Windows path quirk. Use --test (skips restart) and restart Tomcat from CMD:
+  
+  cd /d %TOMCAT_HOME%\bin && shutdown.bat && startup.bat
+  
+  
+  Workbench opens but repo is missing
+  Re-run with --test and watch the “Creating repository …” step.
+  You can also list repos:
+  
+  curl --noproxy localhost -s http://localhost:8080/rdf4j-server/repositories \
+    | sed -n 's:.*<id>\(.*\)</id>.*:\1:p'
+
+GitHub quick start for others
+git clone <your-repo-url>
+cd <repo>
+chmod +x hackathon-bootstrap.sh
+./hackathon-bootstrap.sh --test
+  Workbench: http://localhost:8080/rdf4j-workbench/repositories/ietf-core-test/summary
+  Endpoint : http://localhost:8080/rdf4j-server/repositories/ietf-core-test
