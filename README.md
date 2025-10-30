@@ -7,26 +7,27 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 ✨ Built for demo - quick to run, easy to show.
 
 🚦 Quick start (TL;DR)
-	# 1) Open RDF4J Workbench (locally or publicly)
-	# 2) Create repo ID
-	# 3) Import files in this order:
-	#    a) simap-rdfs-schema.ttl
-	#    b) pwe3-static-topology.ttl
-	#    c) pwe3-dynamic-topology.ttl
-	#    d) Relations-IETF-Noria.ttl (optional alignment)
-	# 4) SPARQL endpoint (use in SPARQLWorks):
-	#    http://localhost:8080/rdf4j-server/repositories/...
+
+	1) Open RDF4J Workbench (locally or publicly)
+	2) Create repo ID
+	3) Import files in this order:
+	   a) simap-rdfs-schema.ttl
+	   b) pwe3-static-topology.ttl
+	   c) pwe3-dynamic-topology.ttl
+	   d) Relations-IETF-Noria.ttl (optional alignment)
+	4) SPARQL endpoint (use in SPARQLWorks):
+	   http://localhost:8080/rdf4j-server/repositories/...
 
 📦 Repository structure
-.
-├─ schema/
-│  └─ simap-rdfs-schema.ttl            # RDFS schema, single base path
-├─ instances/
-│  ├─ pwe3-static-topology.ttl         # Static PWE3 instance
-│  └─ pwe3-dynamic-topology.ttl        # Dynamic PWE3 instance
-├─ alignment/
-│  └─ Relations-IETF-Noria.ttl         # Cross-model links: IETF <--> NORIA (optional)
-└─ README.md
+
+	- schema/
+	  - simap-rdfs-schema.ttl            # RDFS schema, single base path
+	- instances/
+	  - pwe3-static-topology.ttl         # Static PWE3 instance
+	  - pwe3-dynamic-topology.ttl        # Dynamic PWE3 instance
+	- alignment/
+	  - Relations-IETF-Noria.ttl         # Cross-model links: IETF <--> NORIA (optional)
+	- README.md
 
 🧠 Data model highlights
 
