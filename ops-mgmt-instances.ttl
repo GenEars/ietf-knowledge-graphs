@@ -1,0 +1,27 @@
+@prefix mgmt: <http://www.huawei.com/ontology/ops-mgmt/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# 2.1 Engineer instance
+<http://www.huawei.com/data/people/michael-chen>
+  a mgmt:Engineer ;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Michael Chen" .
+
+# 2.2 Link (core-path-network overlay)
+<http://www.huawei.com/data/network/core-path-network/link/fd23ea9e-927c-11ef-8000-286ed4897b20_NEWID1_DIRECTION1>
+  a <http://www.huawei.com/ontology/ietf-network/networks/network/link> ;
+  mgmt:managedBy <http://www.huawei.com/data/people/michael-chen> ;
+  prov:wasAttributedTo <http://www.huawei.com/data/people/michael-chen> ;
+  mgmt:assignedOn "2025-10-30T10:00:00Z"^^xsd:dateTime .
+
+# 2.3 Layer3 node
+<http://www.huawei.com/data/network/layer3-network/node/NE-167772538>
+  a <http://www.huawei.com/ontology/ietf-network/networks/network/node> ;
+  mgmt:managedBy <http://www.huawei.com/data/people/michael-chen> ;
+  mgmt:assignedOn "2025-10-30T10:05:00Z"^^xsd:dateTime .
+
+# 2.4 Termination point (static-cr-layer iface)
+<http://www.huawei.com/data/network/static-cr-layer/node/ed91ed79-e346-40cc-af35-8df5ee552150/iface/74a8e346-648b-488d-9b53-16f445a4213a>
+  a <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point> ;
+  mgmt:managedBy <http://www.huawei.com/data/people/michael-chen> ;
+  mgmt:assignedOn "2025-10-30T10:07:00Z"^^xsd:dateTime .

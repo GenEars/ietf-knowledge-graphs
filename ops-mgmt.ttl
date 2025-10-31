@@ -1,0 +1,40 @@
+@prefix mgmt: <http://www.huawei.com/ontology/ops-mgmt/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Classes
+mgmt:NetworkResource a owl:Class ;
+  rdfs:label "Network Resource" ;
+  rdfs:comment "Any IETF network object we may manage." .
+
+mgmt:Engineer a owl:Class ;
+  rdfs:subClassOf prov:Agent ;
+  rdfs:label "Network Engineer" .
+
+# Properties
+mgmt:managedBy a owl:ObjectProperty ;
+  rdfs:label "managed by" ;
+  rdfs:comment "Resource --> Engineer who manages/owns it." ;
+  rdfs:domain mgmt:NetworkResource ;
+  rdfs:range  mgmt:Engineer ;
+  rdfs:subPropertyOf prov:wasAttributedTo ;
+  owl:inverseOf mgmt:manages .
+
+mgmt:manages a owl:ObjectProperty ;
+  rdfs:label "manages" ;
+  rdfs:comment "Engineer --> Resource managed." .
+
+mgmt:assignedOn a owl:DatatypeProperty ;
+  rdfs:label "assigned on" ;
+  rdfs:domain mgmt:NetworkResource ;
+  rdfs:range xsd:dateTime .
+
+# Bring IETF classes under mgmt:NetworkResource
+<http://www.huawei.com/ontology/ietf-network/networks/network/link>
+  rdfs:subClassOf mgmt:NetworkResource .
+<http://www.huawei.com/ontology/ietf-network/networks/network/node>
+  rdfs:subClassOf mgmt:NetworkResource .
+<http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point>
+  rdfs:subClassOf mgmt:NetworkResource .
