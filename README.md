@@ -56,19 +56,24 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 # 🧪 How to run (RDF4J Workbench)
 
 - Open the rdf4j-workbench UI => http://localhost:8080/rdf4j-workbench
+
 - Create repository => http://localhost:8080/rdf4j-workbench/repositories/NONE/create
   - Type : Native store
   - Repository ID: name
+
 - Import data into the *name* repository, in the following order => http://localhost:8080/rdf4j-workbench/repositories/name/add
   - schema/simap-rdfs-schema.ttl --> (Context: http://www.huawei.com/graph/schema)
   - instances/pwe3-static-topology.ttl --> (Context: http://www.huawei.com/graph/instance/pwe3-static-topology)
   - instances/pwe3-dynamic-topology.ttl --> (Context: http://www.huawei.com/graph/instance/pwe3-dynamic-topology)
   - alignment/relations-IETF-Simap-Noria.ttl (optional) --> (Context: http://www.huawei.com/graph/alignment)
   - schema/ops-mgmt.ttl (optional) --> (Context: http://www.huawei.com/graph/schema)
+  - alignment/relations-ops-mgmt-Noria.ttl (optional) --> (Context: http://www.huawei.com/graph/alignment)
   - instances/ops-mgmt-instances.ttl (optional) --> (Context: http://www.huawei.com/graph/instance/ops-mgmt-instances)
+
 - Query data through the SPARQL endpoint (for tools):
   - SPARQL endpoint : http://localhost:8080/rdf4j-server/repositories/name or a public server domain if you want to take the endpoint
   - RDF4J SPARQL endpoint UI : http://localhost:8080/rdf4j-workbench/repositories/name/query 
+
 - Sanity check (Workbench --> SPARQL):
 	```
 	SELECT (COUNT(*) AS ?triples) WHERE { ?s ?p ?o }
