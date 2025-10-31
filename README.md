@@ -114,6 +114,8 @@ Restart Tomcat afterwards.
 1. Root --> networks --> network-types : [rq/rq_simap_root_networks_network-types.sparql](rq/rq_simap_root_networks_network-types.sparql)
 2. Links with Source/Dest --> Termination Points : [rq/rq_simap_links_tp.sparql](rq/rq_simap_links_tp.sparql)
 3. Supporting-node : [rq/rq_simap_supporting-node.sparql](rq/rq_simap_supporting-node.sparql)
+4. Node managed by and potential relationship to an incident : [rq/rq_noria_managedBy.sparql](rq/rq_noria_managedBy.sparql)
+5. Implemented alignment relationships across models : [rq/rq_model-relationships.sparql](rq/rq_model-relationships.sparql)
 
 # ✅ Demo checklist
 
