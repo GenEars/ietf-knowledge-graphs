@@ -55,17 +55,20 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 
 # 🧪 How to run (RDF4J Workbench)
 
-- Open http://localhost:8080/rdf4j-workbench.
-- Create repository --> Native store
+- Open the rdf4j-workbench UI => http://localhost:8080/rdf4j-workbench
+- Create repository => http://localhost:8080/rdf4j-workbench/repositories/NONE/create
+  - Type : Native store
   - Repository ID: name
-- Import (in this order):
-  - simap-rdfs-schema.ttl --> (Context: http://www.huawei.com/graph/schema)
+- Import data into the *name* repository, in the following order => http://localhost:8080/rdf4j-workbench/repositories/name/add
+  - schema/simap-rdfs-schema.ttl --> (Context: http://www.huawei.com/graph/schema)
   - instances/pwe3-static-topology.ttl --> (Context: http://www.huawei.com/graph/instance/pwe3-static-topology)
   - instances/pwe3-dynamic-topology.ttl --> (Context: http://www.huawei.com/graph/instance/pwe3-dynamic-topology)
-  - alignment/Relations-IETF-Noria.ttl (optional) --> (Context: http://www.huawei.com/graph/alignment)
-- SPARQL endpoint (for tools):
-  - http://localhost:8080/rdf4j-server/repositories/name
-  - or a public server domain if you want to take the endpoint
+  - alignment/relations-IETF-Simap-Noria.ttl (optional) --> (Context: http://www.huawei.com/graph/alignment)
+  - schema/ops-mgmt.ttl (optional) --> (Context: http://www.huawei.com/graph/schema)
+  - instances/ops-mgmt-instances.ttl (optional) --> (Context: http://www.huawei.com/graph/instance/ops-mgmt-instances)
+- Query data through the SPARQL endpoint (for tools):
+  - SPARQL endpoint : http://localhost:8080/rdf4j-server/repositories/name or a public server domain if you want to take the endpoint
+  - RDF4J SPARQL endpoint UI : http://localhost:8080/rdf4j-workbench/repositories/name/query 
 - Sanity check (Workbench --> SPARQL):
 	```
 	SELECT (COUNT(*) AS ?triples) WHERE { ?s ?p ?o }
@@ -74,8 +77,10 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 
 ## Local use (recommended)
 
-- Download SPARQLWorks from https://github.com/danielhmills/sparqlworks and open sparqlworks.html locally (or serve via python -m http.server).
-- Endpoint: http://localhost:8080/rdf4j-server/repositories/...
+- Download SPARQLWorks from https://github.com/danielhmills/sparqlworks
+- Open the `sparqlworks.html` file locally using your favorite Web browser (or serve via python -m http.server).
+- Set *Query Mode* : Advanced
+- Set *SPARQL Endpoint* : http://localhost:8080/rdf4j-server/repositories/name
 - Run CONSTRUCT queries (see below) for live graph visuals.
 
 If your browser blocks cross-origin calls, enable CORS on Tomcat (global conf/web.xml):

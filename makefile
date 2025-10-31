@@ -1,15 +1,43 @@
+## makefile for the ietf-knowledge-graphs project
+
 SHELL := /bin/bash
 ROOT_DIR := $(PWD)
 
-## makefile for the ietf-knowledge-graphs project
+# ----------------------------------------------------------------------
+
+# Loading (optional) environment variables from file.
+# For example, to define PROXY setting :
+# PROXY_SRV=xxx.yyy.fr
+# PROXY_PORT=8080
+-include .env
+
+# ----------------------------------------------------------------------
+
 help:	## Show this help.
 	# Get lines with double dash comments and display it
 	@fgrep -h "## " $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/## //'
+
+# --- INSTALL ----------------------------------------------------------
+
+install-sparqlworks:
+	@echo -e "\033[35m > Install SPARQLWorks  \033[0m - Need Internet access, see https://github.com/danielhmills/sparqlworks"
+	@echo -e "PROXY_SRV = ${PROXY_SRV} / PROXY_PORT = ${PROXY_PORT}"
+	@PROXY_OPT=$$(if [ -n "${PROXY_SRV}" ] && [ -n "${PROXY_PORT}" ]; then echo --proxy ${PROXY_SRV}:${PROXY_PORT}; else echo ""; fi); \
+	curl -L \
+	  $$PROXY_OPT \
+	  -o ./lib/sparqlworks/sparqlworks.zip \
+	  --create-dirs \
+	  https://github.com/danielhmills/sparqlworks/archive/refs/tags/0.7.0.zip
+	@unzip ./lib/sparqlworks/sparqlworks.zip -d ./lib/sparqlworks/
+	@echo -e "\033[35m > Done  \033[0m"
+
+# --- RUN --------------------------------------------------------------
 
 start-rdf4j-docker:	## Start a RDF4J instance on localhost
 	@echo -e "\033[35m > Create the rdf4jdb directory structure  \033[0m"
 	mkdir -p rdf4jdb/data/
 	mkdir -p rdf4jdb/logs/
+	mkdir -p rdf4jdb/tomcat-conf/
 	@echo -e "\033[35m > Start a RDF4J instance on localhost  \033[0m"
 	@docker run\
 	  --name rdf4j \
@@ -29,4 +57,10 @@ start-rdf4j-docker:	## Start a RDF4J instance on localhost
 stop-rdf4j-docker:	## Stop the RDF4J instance on localhost
 	@echo -e "\033[35m > Stop the RDF4J instance on localhost  \033[0m"
 	@docker container stop rdf4j
+	@echo -e "\033[35m > Done  \033[0m"
+
+
+start-sparqlworks-firefox: ## Open a local SPARQLWorks instance using Firefox
+	@echo -e "\033[35m > Stop the RDF4J instance on localhost  \033[0m"
+	firefox ./lib/sparqlworks/sparqlworks-0.7.0/sparqlworks.html
 	@echo -e "\033[35m > Done  \033[0m"
