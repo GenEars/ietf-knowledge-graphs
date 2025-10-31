@@ -12,13 +12,13 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 
 # 🚦 Quick start (TL;DR)
 
-1. Open RDF4J Workbench (locally or publicly)
+1. Open [RDF4J Workbench](https://rdf4j.org/documentation/tools/server-workbench/) (locally or publicly)
 2. Create repo ID
 3. Import files in this order:
    - simap-rdfs-schema.ttl
    - pwe3-static-topology.ttl
    - pwe3-dynamic-topology.ttl
-   - Relations-IETF-Noria.ttl (optional alignment)
+   - relations-IETF-Noria.ttl (optional alignment)
 4. SPARQL endpoint (use in SPARQLWorks): http://localhost:8080/rdf4j-server/repositories/...
 
 # 📦 Repository structure
@@ -99,7 +99,7 @@ Restart Tomcat afterwards.
 - Make sure the proxy/app adds the CORS headers above.
 - Alternative: use a tunnelling tool (e.g., LocalTunnel, Cloudflared). Ensure your corporate proxy policy allows it.
 
-# 🧭 Example queries (ready for SPARQLWorks):
+# 🧭 Example queries (ready for SPARQLWorks)
 
 1. Root --> networks --> network-types : [rq/rq_simap_root_networks_network-types.sparql](rq/rq_simap_root_networks_network-types.sparql)
 2. Links with Source/Dest --> Termination Points : [rq/rq_simap_links_tp.sparql](rq/rq_simap_links_tp.sparql)
