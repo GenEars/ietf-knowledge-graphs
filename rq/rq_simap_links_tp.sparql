@@ -1,0 +1,19 @@
+# Links with Source/Dest --> Termination Points
+# Keep LIMIT small for readable graphs during demos.
+CONSTRUCT {
+    ?link a <http://www.huawei.com/ontology/ietf-network/networks/network/link> ;
+    <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasSource> ?src ;
+    <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasDest>   ?dst .
+    ?src  <http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-tp> ?st .
+    ?dst  <http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-tp> ?dt .
+    ?st a <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point> .
+    ?dt a <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point> .
+}
+WHERE {
+    ?link a <http://www.huawei.com/ontology/ietf-network/networks/network/link> .
+    OPTIONAL { ?link <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasSource> ?src .
+    OPTIONAL { ?src <http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-tp> ?st . } }
+    OPTIONAL { ?link <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasDest>   ?dst .
+    OPTIONAL { ?dst <http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-tp> ?dt . } }
+}
+LIMIT 100

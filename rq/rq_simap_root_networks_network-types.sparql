@@ -1,0 +1,14 @@
+# Root --> networks --> network-types
+# Keep LIMIT small for readable graphs during demos.
+CONSTRUCT {
+    <http://www.huawei.com/data/networks>
+    <http://www.huawei.com/ontology/ietf-network/networks/hasNetwork> ?net .
+    ?net a <http://www.huawei.com/ontology/ietf-network/networks/network> ;
+    <http://www.huawei.com/ontology/ietf-network/networks/network/hasNetworkTypes> ?nt .
+    ?nt  a <http://www.huawei.com/ontology/ietf-network/networks/network/network-types> .
+}
+WHERE {
+    OPTIONAL { <http://www.huawei.com/data/networks>
+    <http://www.huawei.com/ontology/ietf-network/networks/hasNetwork> ?net . }
+    OPTIONAL { ?net <http://www.huawei.com/ontology/ietf-network/networks/network/hasNetworkTypes> ?nt . }
+}

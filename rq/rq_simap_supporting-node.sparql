@@ -1,0 +1,15 @@
+# Supporting node
+# Keep LIMIT small for readable graphs during demos.
+CONSTRUCT {
+    ?snItem a <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node> ;
+    <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/network-ref> ?nw ;
+    <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/node-ref>    ?nref .
+    ?nw   a <http://www.huawei.com/ontology/ietf-network/networks/network> .
+    ?nref a <http://www.huawei.com/ontology/ietf-network/networks/network/node> .
+}
+WHERE {
+    ?snItem a <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node> .
+    OPTIONAL { ?snItem <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/network-ref> ?nw . }
+    OPTIONAL { ?snItem <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/node-ref>    ?nref . }
+}
+LIMIT 100
