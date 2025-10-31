@@ -113,59 +113,11 @@ Outcome: consistent schema + instance data for queries, validation, and visualis
 	
 	Alternative: use a tunnelling tool (e.g., LocalTunnel, Cloudflared). Ensure your corporate proxy policy allows it.
 
-🧭 Example queries (ready for SPARQLWorks)
+🧭 Example queries (ready for SPARQLWorks):
 
-	Keep LIMIT small for readable graphs during demos.
-	
-	1) Root --> networks --> network-types
-	
-	CONSTRUCT {
-	  <http://www.huawei.com/data/networks>
-	    <http://www.huawei.com/ontology/ietf-network/networks/hasNetwork> ?net .
-	  ?net a <http://www.huawei.com/ontology/ietf-network/networks/network> ;
-	       <http://www.huawei.com/ontology/ietf-network/networks/network/hasNetworkTypes> ?nt .
-	  ?nt  a <http://www.huawei.com/ontology/ietf-network/networks/network/network-types> .
-	}
-	WHERE {
-	  OPTIONAL { <http://www.huawei.com/data/networks>
-	    <http://www.huawei.com/ontology/ietf-network/networks/hasNetwork> ?net . }
-	  OPTIONAL { ?net <http://www.huawei.com/ontology/ietf-network/networks/network/hasNetworkTypes> ?nt . }
-	}
-
-	2) Links with Source/Dest --> Termination Points
-
-	CONSTRUCT {
-	  ?link a <http://www.huawei.com/ontology/ietf-network/networks/network/link> ;
-	        <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasSource> ?src ;
-	        <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasDest>   ?dst .
-	  ?src  <http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-tp> ?st .
-	  ?dst  <http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-tp> ?dt .
-	  ?st a <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point> .
-	  ?dt a <http://www.huawei.com/ontology/ietf-network/networks/network/node/termination-point> .
-	}
-	WHERE {
-	  ?link a <http://www.huawei.com/ontology/ietf-network/networks/network/link> .
-	  OPTIONAL { ?link <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasSource> ?src .
-	             OPTIONAL { ?src <http://www.huawei.com/ontology/ietf-network/networks/network/link/source/source-tp> ?st . } }
-	  OPTIONAL { ?link <http://www.huawei.com/ontology/ietf-network/networks/network/link/hasDest>   ?dst .
-	             OPTIONAL { ?dst <http://www.huawei.com/ontology/ietf-network/networks/network/link/destination/dest-tp> ?dt . } }
-	}
-	LIMIT 100
-
-	3) Supporting-node
-	CONSTRUCT {
-	  ?snItem a <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node> ;
-	          <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/network-ref> ?nw ;
-	          <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/node-ref>    ?nref .
-	  ?nw   a <http://www.huawei.com/ontology/ietf-network/networks/network> .
-	  ?nref a <http://www.huawei.com/ontology/ietf-network/networks/network/node> .
-	}
-	WHERE {
-	  ?snItem a <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node> .
-	  OPTIONAL { ?snItem <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/network-ref> ?nw . }
-	  OPTIONAL { ?snItem <http://www.huawei.com/ontology/ietf-network/networks/network/node/supporting-node/node-ref>    ?nref . }
-	}
-	LIMIT 100
+1. Root --> networks --> network-types : [rq/rq_simap_root_networks_network-types.sparql](rq/rq_simap_root_networks_network-types.sparql)
+2. Links with Source/Dest --> Termination Points : [rq/rq_simap_links_tp.sparql](rq/rq_simap_links_tp.sparql)
+3. Supporting-node : [rq/rq_simap_supporting-node.sparql](rq/rq_simap_supporting-node.sparql)
 
 ✅ Demo checklist
 	- Schema loaded
